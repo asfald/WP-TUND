@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -11,24 +12,26 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'underscores_simple' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'underscores_simple' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'underscores_simple' ), 'underscores_simple', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
 
-<?php wp_footer(); ?>
+    <footer class="flex flex-col items-center justify-center bg-black text-white h-60 w-full">
+      <div class="w-24 h-auto invert pb-8">
+        <?php the_custom_logo(); ?>
+      </div>
+      <div class="">
+        <ul class="flex md:flex-row flex-col  font-bold text-xl space-x-0 items-center md:space-x-12">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">blog</a></li>
+          <li><a href="#">portfolio</a></li>
+          <li><a href="#">work</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </div>
+    </footer>
+
+
+
+<script src="js/custom.js"></script>
 
 </body>
+
 </html>
